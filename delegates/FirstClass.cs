@@ -14,7 +14,7 @@ namespace Delegates
         /// <summary>
         /// Delegate for Pow funk.
         /// </summary>
-        private Func<double, double, double> delegaDlyaPow;
+        private readonly Func<double, double, double> delegaDlyaPow;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FirstClass"/> class.

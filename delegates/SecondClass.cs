@@ -31,7 +31,7 @@ namespace Delegates
 
         private bool Result(double x)
         {
-            return this.powResult % x == 0 ? true : false;
+            return this.powResult % x == 0;
         }
     }
 }
