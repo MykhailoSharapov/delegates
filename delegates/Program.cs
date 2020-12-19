@@ -13,10 +13,13 @@ namespace Delegates
     {
         private static void Main(string[] args)
         {
+            double multiplierOne = 5;
+            double multiplierTwo = 5;
+            double ostatOkotDelenia = 5;
             FirstClass fc = new FirstClass();
             SecondClass sc = new SecondClass();
             fc.Delegat = Show;
-            fc.Delegat.Invoke(sc.Calc(fc.DelegatDlyaPow, 5, 5).Invoke(5));
+            fc.Delegat.Invoke(sc.Calc(fc.DelegatDlyaPow, multiplierOne, multiplierTwo).Invoke(ostatOkotDelenia));
         }
 
         private static void Show(bool res)
