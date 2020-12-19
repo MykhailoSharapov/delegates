@@ -1,29 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="SecondClass.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
-namespace delegates
+namespace Delegates
 {
-    class SecondClass
+    using System;
+
+    /// <summary>
+    /// second class of task.
+    /// </summary>
+    public class SecondClass
     {
-        double PowResult;
+        private double powResult;
 
-        Predicate<double> calcDelega;
+        private Predicate<double> calcDelega;
 
-        public Predicate<double> Calc(Func<double,double,double>deleg, double x,double y)
+        /// <summary>
+        /// Calculating funk from task.
+        /// </summary>
+        /// <param name="deleg">Delegate.</param>
+        /// <param name="x">x.</param>
+        /// <param name="y">y.</param>
+        /// <returns>result.</returns>
+        public Predicate<double> Calc(Func<double, double, double> deleg, double x, double y)
         {
-            PowResult = deleg(x, y);
-            calcDelega = Result;
-            return calcDelega;
+            this.powResult = deleg(x, y);
+            this.calcDelega = this.Result;
+            return this.calcDelega;
         }
-        public bool Result(double x)
+
+        private bool Result(double x)
         {
-            if (PowResult % x == 0)
-                return true;
-            else
-                return false;
+            return this.powResult % x == 0 ? true : false;
         }
     }
 }

@@ -1,22 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// <copyright file="Program.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
-namespace delegates
+namespace Delegates
 {
-    class Program
+    using System;
+
+    /// <summary>
+    /// Main class of console.
+    /// </summary>
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             FirstClass fc = new FirstClass();
             SecondClass sc = new SecondClass();
-            fc.delega = Show;
-            fc.delega.Invoke(sc.Calc(fc.delegaDlyaPow, 5, 5).Invoke(5));
-
+            fc.Delegat = Show;
+            fc.Delegat.Invoke(sc.Calc(fc.DelegatDlyaPow, 5, 5).Invoke(5));
         }
-        public static void Show(bool res)
+
+        private static void Show(bool res)
         {
             Console.WriteLine(res);
         }
