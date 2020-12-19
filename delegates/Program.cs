@@ -12,8 +12,8 @@ namespace delegates
         {
             FirstClass fc = new FirstClass();
             SecondClass sc = new SecondClass();
-            Show(sc.Calc(fc.delegaDlyaPow, 5, 5));
             fc.delega = Show;
+            fc.delega.Invoke(sc.Calc(fc.delegaDlyaPow, 5, 5).Invoke(5));
 
         }
         public static void Show(bool res)
