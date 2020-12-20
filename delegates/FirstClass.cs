@@ -14,25 +14,25 @@ namespace Delegates
         /// <summary>
         /// Delegate for Pow funk.
         /// </summary>
-        private readonly Func<double, double, double> delegaDlyaPow;
+        private readonly Func<double, double, double> powFunctions;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="FirstClass"/> class.
         /// </summary>
         public FirstClass()
         {
-            this.delegaDlyaPow = this.Pow;
+            this.powFunctions = this.Pow;
         }
 
         /// <summary>
         /// Gets delegate.
         /// </summary>
-        public Func<double, double, double> DelegatDlyaPow => this.delegaDlyaPow;
+        public Func<double, double, double> PowFunct => this.powFunctions;
 
         /// <summary>
         /// Gets or sets delegate.
         /// </summary>
-        public Action<bool> Delegat { get; set; }
+        public Action<bool> ShowResult { get; set; }
 
         /// <summary>
         /// multiply of x y.

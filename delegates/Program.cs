@@ -18,8 +18,8 @@ namespace Delegates
             double ostatOkotDelenia = 5;
             FirstClass fc = new FirstClass();
             SecondClass sc = new SecondClass();
-            fc.Delegat = Show;
-            fc.Delegat.Invoke(sc.Calc(fc.DelegatDlyaPow, multiplierOne, multiplierTwo).Invoke(ostatOkotDelenia));
+            fc.ShowResult = Show;
+            fc.ShowResult.Invoke(sc.Calc(fc.PowFunct, multiplierOne, multiplierTwo).Invoke(ostatOkotDelenia));
         }
 
         private static void Show(bool res)

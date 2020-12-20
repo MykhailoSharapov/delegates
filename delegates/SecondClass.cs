@@ -13,8 +13,6 @@ namespace Delegates
     {
         private double powResult;
 
-        private Predicate<double> calcDelega;
-
         /// <summary>
         /// Calculating funk from task.
         /// </summary>
@@ -25,8 +23,7 @@ namespace Delegates
         public Predicate<double> Calc(Func<double, double, double> deleg, double x, double y)
         {
             this.powResult = deleg(x, y);
-            this.calcDelega = this.Result;
-            return this.calcDelega;
+            return this.Result;
         }
 
         private bool Result(double x)
